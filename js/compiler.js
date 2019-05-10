@@ -36,12 +36,12 @@ Compile.prototype = {
             let text = node.textContent;
             let reg = /\{\{(.*)\}\}/;
             if(me.isElementNode(node)){
-                me.Compile(node)
+                me.compile(node)
             } else if (me.isTextNode(node) && reg.test(text)) {
                 me.compileText(node, RegExp.$1.trim())
             }
 
-            if(node.childNodes && node.childNOdes.length){
+            if(node.childNodes && node.childNodes.length){
                 me.compileElement(node)
             }
         })

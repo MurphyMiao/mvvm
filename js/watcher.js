@@ -45,8 +45,8 @@ Watcher.prototype = {
     },
     
     addDep (dep){
-        if(!this.depIds.hasOwnProperty(dep, id)){
-            deo.addSub(this)
+        if(!this.depIds.hasOwnProperty(dep.id)){
+            dep.addSub(this)
             this.depIds[dep.id] = dep
         }
     },
